@@ -1,0 +1,1 @@
+Simple ofTrueTypeFont subclass that allows to draw text centered around a point
