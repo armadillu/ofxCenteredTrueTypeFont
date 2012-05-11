@@ -9,10 +9,6 @@ class testApp : public ofBaseApp{
 		void setup();
 		void update();
 		void draw();
-		
+
 		ofxCenteredTrueTypeFont font;
-	
-		string a, b;
-		string* currentMessage;
-	
 };
