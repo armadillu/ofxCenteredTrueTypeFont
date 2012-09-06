@@ -19,7 +19,8 @@ void testApp::update(){
 
 void testApp::draw(){
 
-	font.drawStringCentered("CENTERED", mouseX, mouseY);
+	font.drawStringCentered("CENTERED", mouseX, mouseY - 60);
+	font.drawCenteredBoundingBox("CENTERED", mouseX, mouseY - 60, 10);
 }
 
 
