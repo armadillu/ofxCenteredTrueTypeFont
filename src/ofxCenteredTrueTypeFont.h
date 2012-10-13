@@ -25,26 +25,21 @@ class ofxCenteredTrueTypeFont : public ofTrueTypeFont{
 		r.y -= padding;
 		r.width += 2.0f * padding;
 		r.height += 2.0f * padding;
-		ofNoFill();
 		ofSetRectMode(OF_RECTMODE_CENTER);
 		ofRect( x, y, r.width, r.height);
 		ofSetRectMode(OF_RECTMODE_CORNER);
-		ofFill();
 	}
 
 	
 	void drawStringCenteredVertically(string s, float x, float y){
-		
 		ofVec2f offset = getOffset(s);
 		drawString(s, x, y + offset.y );
 	}
 
 	
 	void drawStringCenteredHorizontally(string s, float x, float y){
-		
 		ofVec2f offset = getOffset(s);
 		drawString(s, x + offset.x, y);
 	}
-
 };
 
