@@ -18,6 +18,10 @@ class ofxCenteredTrueTypeFont : public ofTrueTypeFont{
 		else
 			drawStringAsShapes(s, x + offset.x, y + offset.y);		
 	}
+
+	void drawStringCentered(string s, ofVec2f pos, bool asVector = false){
+		drawStringCentered(s, pos.x, pos.y, asVector);
+	}
 	
 	void drawCenteredBoundingBox(string s, float x, float y, float padding = 0){
 		ofRectangle r = getStringBoundingBox(s, 0, 0);
@@ -29,17 +33,24 @@ class ofxCenteredTrueTypeFont : public ofTrueTypeFont{
 		ofRect( x, y, r.width, r.height);
 		ofSetRectMode(OF_RECTMODE_CORNER);
 	}
-
+	void drawCenteredBoundingBox(string s, ofVec2f pos, float padding = 0){
+		drawCenteredBoundingBox(s, pos.x, pos.y, padding);
+	}
 	
 	void drawStringCenteredVertically(string s, float x, float y){
 		ofVec2f offset = getOffset(s);
 		drawString(s, x, y + offset.y );
 	}
-
+void drawStringCenteredVertically(string s, ofVec2f pos){
+	drawStringCenteredVertically(s, pos.x, pos.y);
+}
 	
 	void drawStringCenteredHorizontally(string s, float x, float y){
 		ofVec2f offset = getOffset(s);
 		drawString(s, x + offset.x, y);
+	}
+	void drawStringCenteredHorizontally(string s, ofVec2f pos){
+		drawStringCenteredHorizontally(s, pos.x, pos.y);
 	}
 };
 
