@@ -41,9 +41,9 @@ class ofxCenteredTrueTypeFont : public ofTrueTypeFont{
 		ofVec2f offset = getOffset(s);
 		drawString(s, x, y + offset.y );
 	}
-void drawStringCenteredVertically(string s, ofVec2f pos){
-	drawStringCenteredVertically(s, pos.x, pos.y);
-}
+	void drawStringCenteredVertically(string s, ofVec2f pos){
+		drawStringCenteredVertically(s, pos.x, pos.y);
+	}
 	
 	void drawStringCenteredHorizontally(string s, float x, float y){
 		ofVec2f offset = getOffset(s);
